@@ -350,19 +350,19 @@ li p { }
    color: #313131;
 }
 .stats-tabs li a:hover {
-   color:#11ABB0;
+   color:#fb6000;
 }
 .stats-tabs li a b {
 	display: block;
 	margin: 6px 0 0 0;
 	font-size: 13px;
 	font-family: 'opensans-regular', sans-serif;
-   color: #8;
+   color: #fff;
 }
 
-/* definition list */
+/* definition list 11ABB0 */
 dl { margin: 12px 0; }
-dt { margin: 0; color:#11ABB0; }
+dt { margin: 0; color:#fb6000; }
 dd { margin: 0 0 0 20px; }
 
 /* Lining Definition Style Markup */
@@ -437,8 +437,8 @@ dd { margin: 0 0 0 20px; }
 }
 .pagination .current,
 .pagination .current:hover {
-   background-color: #11ABB0;
-   color: #fff;
+   background-color: #fb6000;
+   color: #fb6000;
 }
 .pagination .inactive,
 .pagination .inactive:hover {
@@ -465,7 +465,9 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
    font: 16px/30px 'opensans-bold', sans-serif;
-   background: #11ABB0;
+   background: #fb6000;
+   width: 60%;
+   border-radius: 50%;
    display: inline-block;
 	text-decoration: none;
    letter-spacing: 0;
@@ -801,7 +803,7 @@ properly.
 	margin-left: auto !important;
 	margin-right: auto !important;
 	text-align: center !important;*/
-}
+
 
 
 
