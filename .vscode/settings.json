@@ -3,5 +3,7 @@
     "azureFunctions.projectLanguage": "C#",
     "azureFunctions.projectRuntime": "~4",
     "debug.internalConsoleOptions": "neverOpen",
-    "azureFunctions.preDeployTask": "publish (functions)"
+    "azureFunctions.preDeployTask": "publish (functions)",
+    "appService.defaultWebAppToDeploy": "/subscriptions/ca81dfde-8ad3-4983-aad5-775ffaf65299/resourceGroups/Azure-RESume/providers/Microsoft.Web/sites/Lacino-portfolio",
+    "appService.deploySubpath": "frontend"
 }
