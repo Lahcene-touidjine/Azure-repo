@@ -27,7 +27,6 @@
     <!-- Script
     ================================================== -->
     <script src="js/modernizr.js"></script>
-    <script src="main.js"></script>
     <script src="https://kit.fontawesome.com/6626870869.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
@@ -211,6 +210,7 @@
               <span class="icon">📚 ✅✅✅ </span>
               
             </div>
+          
             <div class="column">
               <a href="certification.html"><h2>Skills and Certifications</h2>
                 <span class="icon"> ⭐ ✅✅✅</span>
@@ -243,19 +243,20 @@
                                     
                                     
                                 
-                                    <a href="images/Lahcene_Touidjin.pdf" download class="Btn btn2">Download CV </a>
+                                    <a href="images/Lahceneresume.pdf" download class="Btn btn2">Download CV </a>
     
                                     <div class="container">
     
-                                        <form >
+                                        <form name="submit-to-google-sheet">
                                             <input type="text" name="Name" placeholder="Your Name " required>
-                                            <input type="email"name="email"placeholder="Your Email"required>
-                                            <textarea rows="4" cols="40" style="vertical-align: middle;"placeholder="Your message"></textarea>
+                                            <input type="email"name="Email"placeholder="Your Email"required>
+                                            <textarea name="Message" rows="4" cols="40" style="vertical-align: middle;"placeholder="Your message"></textarea>
                                             <button type="submit" class="btn btn2">Submit</button>
     
-    
+                                            <br><span id="msg"> </span>
     
                                         </form>
+                                        
                                     </div>
                                 </div>
                     </div>
@@ -299,7 +300,28 @@
     <script src="js/jquery.fittext.js"></script>
     <script src="js/magnific-popup.js"></script>
     <script src="js/init.js"></script>
+    
+      
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx5Ei6_CLisbjwui7doPyeIQwOvE22ttTQA8xfGeWjkLd413t7YrUydRls6htXAMbeh/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
 
+                msg.innerHTML ="Messge has been sent , Thanks"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },3000)
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    
 </body>
 
 </html>
