@@ -1,0 +1,28 @@
+name: Deploy Frontend to Root
+
+on:
+  push:
+    branches:
+      - main  # Set this to your default branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Move frontend content to root
+      run: |
+        mv frontend/* ./
+        mv frontend/.* ./
+        rm -rf frontend
+
+    - name: Commit files
+      run: |
+        git config --global user.email "lahcene.touidjine@gmail.com"
+        git config --global user.name "lahceneT"
+        git add -A
+        git commit -m "Deploy frontend content to root"
+        git push origin main
+
