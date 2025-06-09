@@ -5,5 +5,6 @@
     "debug.internalConsoleOptions": "neverOpen",
     "azureFunctions.preDeployTask": "publish (functions)",
     "appService.defaultWebAppToDeploy": "/subscriptions/ca81dfde-8ad3-4983-aad5-775ffaf65299/resourceGroups/Azure-RESume/providers/Microsoft.Web/sites/Lacino-portfolio",
-    "appService.deploySubpath": "frontend"
+    "appService.deploySubpath": "frontend",
+    "livePreview.defaultPreviewPath": "/frontend/Aboutme.html"
 }
